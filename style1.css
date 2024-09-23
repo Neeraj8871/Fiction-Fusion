@@ -1,0 +1,42 @@
+/* Custom CSS */
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    color: #f8f9fa !important;
+}
+
+/* Hero Section */
+.jumbotron {
+    background-image: url('img/black-myth-wukong-7680x4320-18173.jpg');
+    background-size: cover;
+    opacity: 90%;
+    color:gray;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+
+    color:rgb(199, 199, 199);
+    text-shadow: #9f0aeff6;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 5px;
+}
+
+/* Responsive Features Section */
+@media (max-width: 768px) {
+    .container .row {
+        text-align: center;
+    }
+}

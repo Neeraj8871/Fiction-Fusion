@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fiction Fusion</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .btn{
+
+background-color:burlywood;
+color: #000;
+}
+      
+        /* .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        } */
+        
+        /* Contact Section */
+        .contact-container {
+            max-width: 800px;
+            margin: 50px auto;
+            /* background-color: white; */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            justify-content: space-around;
+            color: whitesmoke;
+        }
+        p {
+          justify-content: space-around;
+          color: whitesmoke;
+        
+        }
+        #ff{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 16px;
+            color: whitesmoke;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea ,label ,button{
+            width: 50%;
+            padding: 10px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;}
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            /* color: white; */
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Fiction Fusion</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="read_write.html">Create</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="author_interface.html">Author Interface</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" href="user_interface.html">User Interface</a></li> -->
+                
+                <li class="nav-item"><a class="nav-link" href="read.html">Read Story</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Stories" aria-label="Search">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+            <a href="login2.html" class="btn btn-primary ml-3">Login</a>
+            <a href="login2.html" class="btn btn-success ml-2">Register</a>
+        </div>
+    </nav>
+    <!-- Contact Us Section -->
+    <div class="contact-container">
+
+        <video autoplay muted loop class="background-video">
+            <source src="img/bg.mp4" type="video/mp4">
+        </video>
+        <h2>Contact Us</h2>
+        <!-- <p>We'd love to hear from you! Feel <br>free to reach out with any questions or feedback.</p> -->
+
+        <form id="ff">
+            <div>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div>
+                <!-- <label for="message">Your Message:</label> -->
+                 <br>
+                <textarea id="message" name="message" placeholder="Write your message"></textarea>
+            </div>
+               <button type="submit">Submit</button >
+        </form>
+    </div>
+
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

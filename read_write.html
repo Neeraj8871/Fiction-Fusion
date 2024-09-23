@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Story - Fiction Fusion</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .btn{
+
+background-color:burlywood;
+color: #000;
+}
+      
+        /* .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        } */
+        
+        /* Contact Section */
+        .create-container {
+            max-width: 550px;
+            margin: 50px auto;
+            /* background-color: white; */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            justify-content: space-around;
+            color: whitesmoke;
+        }
+        p {
+          justify-content: space-around;
+          color: whitesmoke;
+        
+        }
+        #ff{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 16px;
+            color: whitesmoke;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;}
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            /* color: white; */
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Fiction Fusion</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="read_write.html">Create</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="author_interface.html">Author Interface</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" href="user_interface.html">User Interface</a></li> -->
+                
+                <li class="nav-item"><a class="nav-link" href="read.html">Read Story</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Stories" aria-label="Search">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+            <a href="login2.html" class="btn btn-primary ml-3">Login</a>
+            <a href="login2.html" class="btn btn-success ml-2">Register</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <video autoplay muted loop class="background-video">
+            <source src="img/bg.mp4" type="video/mp4">
+        </video>
+        <h2>Write Your Story</h2>
+        <p>Use the form & create your own interactive fiction story !</p>
+
+        <form id="story-form">
+            <div class="form-group">
+                <label for="storyTitle">Story Title</label>
+                <input type="text" class="form-control" id="storyTitle" placeholder="Enter the title of your story">
+            </div>
+
+            <div class="form-group">
+                <label for="storyCategory">Category</label>
+                <select class="form-control" id="storyCategory">
+                    <option>Adventure</option>
+                    <option>Fantasy</option>
+                    <option>Romance</option>
+                    <option>Horror</option>
+                    <option>Science Fiction</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="storyContent">Story Content</label>
+                <textarea class="form-control" id="storyContent" rows="10" placeholder="Write your story here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit Story</button>
+        </form>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Fiction Fusion. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Basic form handling example - in real application, you would send data to a backend
+        document.getElementById("story-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const title = document.getElementById("storyTitle").value;
+            const category = document.getElementById("storyCategory").value;
+            const content = document.getElementById("storyContent").value;
+
+            if(title && category && content) {
+                alert("Story Submitted Successfully!\nTitle: " + title + "\nCategory: " + category);
+                // Here you would typically send this data to a server.
+            } else {
+                alert("Please fill out all fields before submitting.");
+            }
+        });
+    </script>
+</body>
+</html>

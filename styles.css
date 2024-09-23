@@ -1,0 +1,82 @@
+/* General Reset */
+body, h1, h2, p, a, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    background-color: #000;
+    background-image: url('https://www.example.com/your-background-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header h1 {
+    color: #fff;
+}
+
+.btn {
+    background-color: #1d72b8;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #155a8a;
+}
+
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1d72b8;
+}
+
+.story-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.story-list li {
+    margin: 10px 0;
+}
+
+.story-link {
+    color: #1d72b8;
+    text-decoration: none;
+}
+
+.story-link:hover {
+    text-decoration: underline;
+}
